@@ -1,0 +1,1779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#312f2f"
+    tools:context=".recommendationfragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#312f2f"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#8B4513" />
+
+        <Button
+            android:id="@+id/lv2"
+            style="@drawable/buttonshape"
+            android:textColor="#9B7EA2"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#D6D6D6"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="點我進入模式二"
+            android:visibility="visible"
+            tools:text="點我進入模式二" />
+
+        <Button
+            android:id="@+id/lv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="點我進入模式一"
+            android:visibility="gone"
+            tools:text="點我進入模式一" />
+
+        <RelativeLayout
+            android:id="@+id/resultrelativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#312f2f"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/toset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="返回設定頁面" />
+
+                <ListView
+                    android:id="@+id/resultListview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/toset"
+                    android:background="@color/colorPrimary"
+                    android:divider="@color/cornsilk"
+                    android:dividerHeight="1dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/ifview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/all"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:background="#8B4513" />
+
+                            <TextView
+                                android:id="@+id/aboutrecommend"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="請選擇機種"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/thistle"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:background="#8B4513" />
+
+                            <RadioGroup
+                                android:id="@+id/computertype"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/gamecomputer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/plum"
+                                    android:checked="true"
+                                    android:text="電競機"
+
+                                    android:textColor="@color/turquoise"
+                                    android:textSize="22sp" />
+
+                                <RadioButton
+                                    android:id="@+id/productcomputer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/plum"
+                                    android:text="文書機"
+                                    android:textColor="@color/turquoise"
+                                    android:textSize="22sp" />
+                            </RadioGroup>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:background="#8B4513" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="請選擇特定廠商"
+                                android:textColor="@color/thistle"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:background="#8B4513" />
+
+                            <LinearLayout
+                                android:id="@+id/choicelinearlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="CPU廠商選擇"
+                                    android:textColor="@color/darksalmon"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <LinearLayout
+                                    android:id="@+id/cpuchoicelayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/cpuIntelchoice"
+                                        android:layout_width="181dp"
+                                        android:layout_height="match_parent"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Intel"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/cpuamdchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="AMD"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="MB主機板廠商選擇"
+                                    android:textColor="@color/darksalmon"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <LinearLayout
+                                    android:id="@+id/MBchoicelayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/mbmsichoice"
+                                        android:layout_width="95dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="MSI"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/mbasrockchoice"
+                                        android:layout_width="82dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="ASRock"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/mbgigabytechoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="GIGABYTE"
+                                        android:textColor="@color/turquoise"
+                                        android:textSize="12sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/mbasuschoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="ASUS"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <TextView
+                                    android:id="@+id/textView43"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="RAM廠商選擇"
+                                    android:textColor="@color/darksalmon"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <LinearLayout
+                                    android:id="@+id/RAMchoicelayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/ramgskillchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="G.skill"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/ramTranscendchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Transcend"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/ramUMAXchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="UMAX"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/RAMchoicelayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/ramKingstonchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Kingston"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/ramAdatachoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Adata"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/ramMicronchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Micron"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <TextView
+                                    android:id="@+id/vgatext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text="VGA廠商選擇"
+                                    android:textColor="@color/darksalmon"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:id="@+id/vgatextview1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <LinearLayout
+                                    android:id="@+id/VGAchoicelayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/vgaASUSchoice"
+                                        android:layout_width="95dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="ASUS"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/vgaMSIchoice"
+                                        android:layout_width="82dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="MSI"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/vgaGIGABYTEchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="GIGABYTE"
+                                        android:textColor="@color/turquoise"
+                                        android:textSize="12sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/vgaEVGAchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="EVGA"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/VGAchoicelayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/vgaGalaxychoice"
+                                        android:layout_width="95dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Galaxy"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/vgaINNO3Dchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="INNO3D"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/vgaLEADTEKchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Leadtek"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+
+                                <View
+                                    android:id="@+id/vgatextview2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:text="POWER廠商選擇"
+                                    android:textColor="@color/darksalmon"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <LinearLayout
+                                    android:id="@+id/POWERchoicelayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/powerDeltachoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Delta"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerFSPchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="FSP"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerAntecchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Antec"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/POWERchoicelayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/powerCorsairchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Corsair"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerBitFenixchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="BitFenix"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerBfriendchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="B.FRIEND"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/POWERchoicelayout3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/powerGIGABYTEchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="GIGABYTE"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerSAMAchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="SAMA"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerEVGAchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="EVGA"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/POWERchoicelayou4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/powerAndysonchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Andyson"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerThermaltakechoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Thermaltake"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerXFXchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="XFX"
+                                        android:textColor="@color/turquoise" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/POWERchoicelayout5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/powerCyberSLIMchioice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="CyberSLIM"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerSuperflowerchioice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="SUPERFLOWER"
+                                        android:textColor="@color/turquoise"
+                                        android:textSize="12sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerZUMAXchioice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="ZUMAX"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/POWERchoicelayout6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/powerCoolerMasterchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="CoolerMaster"
+                                        android:textColor="@color/turquoise"
+                                        android:textSize="13sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerSeventeamchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Seventeam"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerSilverstonechoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="SILVERSTONE"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/POWERchoicelayout7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/powerSeasonicchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Seasonic"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerSEEDchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="SEED"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/powerEnermaxchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Enermax"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:text="硬碟廠商選擇"
+                                    android:textColor="@color/darksalmon"
+                                    android:textSize="20sp" />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#8B4513" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/hdAdatachoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Adata"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdSeagatechoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Seagate"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdWDchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="WD"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/hdHGSTchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="HGST"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdSamsungchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Samsung"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdUMAXchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="UMAX"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/hdMicronchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Micron"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdIntelchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Intel"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdHikvisionchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Hikvision"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/hdKingstonchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Kingston"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdSanDiskchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="SanDisk"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdTranscendchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Transcend"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/hdToshibachoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Toshiba"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdGalaxychoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Galaxy"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdPlextorchoice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Plextor"
+                                        android:textColor="@color/turquoise" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/hdLiteonchoice"
+                                        android:layout_width="114dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Liteon"
+                                        android:textColor="@color/turquoise" />
+
+                                    <CheckBox
+                                        android:id="@+id/hdPioneerchoice"
+                                        android:layout_width="117dp"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/aquamarine"
+                                        android:text="Pioneer"
+                                        android:textColor="@color/turquoise" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/secondstep"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <TextView
+                                        android:id="@+id/textView6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="請選擇您的CPU預算"
+                                        android:textColor="@color/thistle"
+                                        android:textSize="25sp"
+                                        android:visibility="visible"
+                                        tools:text="請選擇您的CPU預算" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="10">
+
+                                        <EditText
+                                            android:id="@+id/cpuselectlow"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="0"
+                                            android:inputType="textPersonName"
+                                            android:text="6000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以上"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+
+                                        <EditText
+                                            android:id="@+id/cpuselectup"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="10000"
+                                            android:inputType="textPersonName"
+                                            android:text="10000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView44"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以下"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <TextView
+                                        android:id="@+id/textView4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="請選擇您的主機板預算"
+                                        android:textColor="@color/thistle"
+                                        android:textSize="25sp"
+                                        android:visibility="visible"
+                                        tools:text="請選擇您的主機板預算" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="10">
+
+                                        <EditText
+                                            android:id="@+id/mbselectlow"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="0"
+                                            android:inputType="textPersonName"
+                                            android:text="5000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView9"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以上"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+
+                                        <EditText
+                                            android:id="@+id/mbselectup"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="10000"
+                                            android:inputType="textPersonName"
+                                            android:text="7000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView45"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以下"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <TextView
+                                        android:id="@+id/textView12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="請選擇您的記憶體預算"
+                                        android:textColor="@color/thistle"
+                                        android:textSize="25sp"
+                                        android:visibility="visible"
+                                        tools:text="請選擇您的記憶體預算" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="10">
+
+                                        <EditText
+                                            android:id="@+id/ramselectlow"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="0"
+                                            android:inputType="textPersonName"
+                                            android:text="4000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView13"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以上"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+
+                                        <EditText
+                                            android:id="@+id/ramselectup"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="10000"
+                                            android:inputType="textPersonName"
+                                            android:text="6000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView46"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以下"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <TextView
+                                        android:id="@+id/vgapricetext"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="請選擇您的顯示卡預算"
+                                        android:textColor="@color/thistle"
+                                        android:textSize="25sp"
+                                        android:visibility="visible"
+                                        tools:text="請選擇您的顯示卡預算" />
+
+                                    <View
+                                        android:id="@+id/vgaview1"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <LinearLayout
+                                        android:id="@+id/vgapriceliner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="10">
+
+                                        <EditText
+                                            android:id="@+id/vgaselectlow"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="0"
+                                            android:inputType="textPersonName"
+                                            android:text="10000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView15"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以上"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+
+                                        <EditText
+                                            android:id="@+id/vgaselectup"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="10000"
+                                            android:inputType="textPersonName"
+                                            android:text="20000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView47"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以下"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:id="@+id/vgaview2"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <TextView
+                                        android:id="@+id/textView16"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="請選擇您的硬碟預算"
+                                        android:textColor="@color/thistle"
+                                        android:textSize="25sp"
+                                        android:visibility="visible"
+                                        tools:text="請選擇您的硬碟預算" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="10">
+
+                                        <EditText
+                                            android:id="@+id/hdselectlow"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="0"
+                                            android:inputType="textPersonName"
+                                            android:text="4000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView17"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以上"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+
+                                        <EditText
+                                            android:id="@+id/hdselectup"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="10000"
+                                            android:inputType="textPersonName"
+                                            android:text="6000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView48"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以下"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <TextView
+                                        android:id="@+id/textView18"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:text="請選擇您的電源供應器預算"
+                                        android:textColor="@color/thistle"
+                                        android:textSize="25sp"
+                                        android:visibility="visible"
+                                        tools:text="請選擇您的電源供應器預算" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:background="#8B4513" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:weightSum="10">
+
+                                        <EditText
+                                            android:id="@+id/powerselectlow"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="0"
+                                            android:inputType="textPersonName"
+                                            android:text="3000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView19"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以上"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+
+                                        <EditText
+                                            android:id="@+id/powerselectup"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.2"
+                                            android:ems="10"
+                                            android:hint="10000"
+                                            android:inputType="textPersonName"
+                                            android:text="5000"
+                                            android:textColor="@color/pink"
+                                            android:textColorHighlight="@color/aliceblue" />
+
+                                        <TextView
+                                            android:id="@+id/textView49"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="2.8"
+                                            android:text="以下"
+                                            android:textColor="@color/floralwhite"
+                                            android:textSize="22sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <View
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="2dp"
+                                            android:background="#8B4513" />
+
+                                        <TextView
+                                            android:id="@+id/textView3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_horizontal"
+                                            android:text="請選擇排序方法"
+                                            android:textColor="@color/thistle"
+                                            android:textSize="25sp" />
+
+                                        <View
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="2dp"
+                                            android:background="#8B4513" />
+
+                                        <RadioGroup
+                                            android:id="@+id/orderlisten"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="0dp"
+                                            android:orientation="horizontal">
+
+                                            <RadioButton
+                                                android:id="@+id/radiouptolow"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:buttonTint="@color/plum"
+                                                android:checked="true"
+                                                android:text="由高至低"
+                                                android:textColor="@color/turquoise"
+                                                android:textSize="22sp" />
+
+                                            <RadioButton
+                                                android:id="@+id/radiolowtoup"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:buttonTint="@color/plum"
+                                                android:text="由低至高"
+                                                android:textColor="@color/turquoise"
+                                                android:textSize="22sp" />
+                                        </RadioGroup>
+
+                                        <View
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="2dp"
+                                            android:background="#8B4513" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/clear"
+                                                android:layout_width="103dp"
+                                                android:layout_height="wrap_content"
+                                                android:text="clear" />
+
+                                            <Button
+                                                android:id="@+id/backresult"
+                                                android:layout_width="194dp"
+                                                android:layout_height="wrap_content"
+                                                android:text="返回結果頁面"
+                                                android:visibility="visible" />
+
+                                            <Button
+                                                android:id="@+id/goresult"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="go"
+                                                tools:text="go" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/lv2layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/pricebutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="效能模式" />
+
+                    <Button
+                        android:id="@+id/gamebutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="遊戲模式" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <ScrollView
+                    android:id="@+id/priceview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/pricelv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/ttext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="請選擇CPU的效能比重"
+                            android:textColor="#eafe9f"
+                            android:textSize="25sp" />
+
+                        <View
+                            android:id="@+id/view9"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <Spinner
+                            android:id="@+id/cpulv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <View
+                            android:id="@+id/view8"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="請選擇顯卡的效能比重"
+                            android:textColor="#eafe9f"
+                            android:textSize="25sp" />
+
+                        <View
+                            android:id="@+id/view7"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <Spinner
+                            android:id="@+id/vgalv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="您對於處理資料量需求比重"
+                            android:textColor="#eafe9f"
+                            android:textSize="25sp" />
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <Spinner
+                            android:id="@+id/ramspace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="您對於硬碟講求什麼功能"
+                            android:textColor="#eafe9f"
+                            android:textSize="25sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <Spinner
+                            android:id="@+id/ssdhddtype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="您希望硬碟有多少容量(G)"
+                            android:textColor="#eafe9f"
+                            android:textSize="25sp" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <Spinner
+                            android:id="@+id/ssdhddspace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/pricego"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="go" />
+
+                            <Button
+                                android:id="@+id/pricebackresult"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="返回結果頁面" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view6"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#8B4513" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:id="@+id/gamelv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="請選擇遊戲"
+                        android:textColor="@color/thistle"
+                        android:textSize="25sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <Spinner
+                        android:id="@+id/gamename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@color/colorPrimary" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="請選擇遊戲配置"
+                        android:textColor="@color/thistle"
+                        android:textSize="25sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <Spinner
+                        android:id="@+id/gamenametype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@color/colorPrimary" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/gamego"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="go" />
+
+                        <Button
+                            android:id="@+id/gamebackresult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="返回結果頁面" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+                <LinearLayout
+                    android:id="@+id/priceresultlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ListView
+                        android:id="@+id/priceresultListview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/toset"
+                        android:background="@color/colorPrimary"
+                        android:divider="@color/cornsilk"
+                        android:dividerHeight="1dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/gameresultlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ListView
+                        android:id="@+id/gameresultListview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/toset"
+                        android:background="@color/colorPrimary"
+                        android:divider="@color/cornsilk"
+                        android:dividerHeight="1dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

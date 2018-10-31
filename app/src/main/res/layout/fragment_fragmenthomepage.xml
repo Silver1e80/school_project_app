@@ -1,0 +1,1810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#312f2f"
+    tools:context=".Fragmenthomepage">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#8B4513" />
+        <RelativeLayout
+            android:id="@+id/rv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#8B4513" />
+
+        <RelativeLayout
+            android:id="@+id/cpum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="CPU廠商"
+                    android:textColor="#f9fe00"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cpuintelcheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/aquamarine"
+                        android:text="Intel"
+                        android:textColor="@color/turquoise"
+                        tools:text="Intel" />
+
+                    <CheckBox
+                        android:id="@+id/cpuAMDcheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/aquamarine"
+                        android:text="AMD"
+                        android:textColor="@color/turquoise"
+                        tools:text="AMD" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cpu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/cpulower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="textPersonName"
+                        android:text="1130"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="1130" />
+
+                    <TextView
+                        android:id="@+id/e00"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:text="以上"
+                        android:textColor="@color/floralwhite"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/cpuupper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="10000"
+                        android:inputType="textPersonName"
+                        android:text="61800"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="61800" />
+
+                    <TextView
+                        android:id="@+id/e002"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:text="以下"
+                        android:textColor="@color/floralwhite"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/cpugo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="送出" />
+
+                <RelativeLayout
+                    android:id="@+id/ya3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/cpulistView"
+                            android:layout_width="match_parent"
+                            android:layout_height="370dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:choiceMode="multipleChoice"
+                            android:divider="@color/cornsilk"
+                            android:dividerHeight="1dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/MBm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="1"
+                            android:text="MB廠商"
+                            android:textSize="16sp"
+                            android:gravity="center_horizontal"
+                            android:textColor="#f9fe00" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/mbasus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ASUS"
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/mbgigabyte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="GIGABYTE"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/mbmsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="MSI"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/mbasrock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="ASRock"
+                            android:textColor="@color/turquoise" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <EditText
+                            android:id="@+id/mblow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.2"
+                            android:ems="10"
+                            android:hint="0"
+                            android:inputType="textPersonName"
+                            android:text="1490"
+                            android:textColor="@color/pink"
+                            android:textColorHighlight="@color/aliceblue"
+                            tools:text="1490" />
+
+                        <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.8"
+                            android:text="以上"
+                            android:textColor="@color/floralwhite"
+                            android:textSize="22sp" />
+
+                        <EditText
+                            android:id="@+id/mbup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.2
+                        "
+                            android:ems="10"
+                            android:hint="10000"
+                            android:inputType="textPersonName"
+                            android:text="17900"
+                            android:textColor="@color/pink"
+                            tools:text="17900" />
+
+                        <TextView
+                            android:id="@+id/textView44"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.8"
+                            android:text="以下"
+                            android:textColor="@color/floralwhite"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/MBgo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="送出" />
+
+                    <RelativeLayout
+                        android:id="@+id/ya"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ListView
+                                android:id="@+id/mblistView"
+                                android:layout_width="match_parent"
+                                android:layout_height="320dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:choiceMode="multipleChoice"
+                                android:divider="@color/cornsilk"
+                                android:dividerHeight="1dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RAMm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="#f9fe00"
+                            android:textSize="16sp"
+                            android:text="RAM廠商" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/ramgskill"
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="G.skill" />
+
+                        <CheckBox
+                            android:id="@+id/ramTranscend"
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transcend" />
+
+                        <CheckBox
+                            android:id="@+id/ramUMAX"
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UMAX" />
+
+                        <CheckBox
+                            android:id="@+id/ramKingston"
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kingston" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/ramAdata"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Adata" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/ramMicron"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Micron" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/ramlower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="textPersonName"
+                        android:text="499"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="499" />
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:text="以上"
+                        android:textColor="@color/floralwhite"
+
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/ramupper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="10000"
+                        android:inputType="textPersonName"
+                        android:text="5850"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="5850" />
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:textColor="@color/floralwhite"
+
+                        android:text="以下"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/ramgo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="送出" />
+
+                <RelativeLayout
+                    android:id="@+id/ya1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="2.2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/ramlistView"
+                            android:divider="@color/cornsilk"
+                            android:dividerHeight="1dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="320dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:choiceMode="multipleChoice"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/VGAm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="#f9fe00"
+                            android:textSize="16sp"
+                            android:text="VGA廠商" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/vgaASUS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ASUS" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/vgaMSI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MSI" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/vgaGIGABYTE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gigabyte" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/vgaEVGA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EVGA" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/vgaGalaxy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Galaxy" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/vgaINNO3D"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INNO3D" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/vgaLEADTEK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Leadtek" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/vgalower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="textPersonName"
+                        android:text="2490"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="2490" />
+
+                    <TextView
+                        android:id="@+id/textView48"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:text="以上"
+                        android:textColor="@color/floralwhite"
+
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/vgaupper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="10000"
+                        android:inputType="textPersonName"
+                        android:text="35490"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="35490" />
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:textColor="@color/floralwhite"
+
+                        android:text="以下"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/vgago"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="送出" />
+
+                <RelativeLayout
+                    android:id="@+id/ya2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="2.2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/vgalistView"
+                            android:layout_width="match_parent"
+                            android:layout_height="320dp"
+                            android:divider="@color/cornsilk"
+                            android:dividerHeight="1dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:choiceMode="multipleChoice"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/POWERm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/powerOK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="#f9fe00"
+                            android:textSize="16sp"
+                            android:text="POWER廠商" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/powerDelta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Delta"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerFSP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="FSP"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerAntec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Antec"
+                            android:textColor="@color/turquoise" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/powerCorsair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Corsair"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerBitFenix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="BitFenix"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerBfriend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="B.FRIEND"
+                            android:textColor="@color/turquoise" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/powerGIGABYTE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="GIGABYTE"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerSAMA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="SAMA"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerEVGA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="EVGA"
+                            android:textColor="@color/turquoise" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/powerAndyson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Andyson"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerXFX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="XFX"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerThermaltake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Thermaltake"
+                            android:textColor="@color/turquoise" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/powerCyberSLIM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="CyberSLIM"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerSuperflower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="SUPERFLOWER"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerZUMAX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="ZUMAX"
+                            android:textColor="@color/turquoise" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/powerCoolerMaster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="CoolerMaster"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerSeventeam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Seventeam"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerSilverstone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="SILVERSTONE"
+                            android:textColor="@color/turquoise" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:id="@+id/powerSeasonic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Seasonic"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerSEED"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="SEED"
+                            android:textColor="@color/turquoise" />
+
+                        <CheckBox
+                            android:id="@+id/powerEnermax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/aquamarine"
+                            android:text="Enermax"
+                            android:textColor="@color/turquoise" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/powerOK1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/powerlower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="textPersonName"
+                        android:text="699"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="699" />
+
+                    <TextView
+                        android:id="@+id/textView50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:text="以上"
+                        android:textColor="@color/floralwhite"
+
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/powerupper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:textColor="@color/aquamarine"
+                        android:textColorHighlight="@color/aliceblue"
+                        android:ems="10"
+                        android:hint="10000"
+                        android:inputType="textPersonName"
+                        android:text="19900"
+                        tools:text="19900" />
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:textColor="@color/floralwhite"
+
+                        android:text="以下"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/powergo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="送出" />
+
+                <Button
+                    android:id="@+id/goback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="回至廠商選擇"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@+id/powerlistView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:choiceMode="multipleChoice"
+                    android:divider="@color/cornsilk"
+                    android:dividerHeight="1dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/HDm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/hdTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textColor="#f9fe00"
+                            android:textSize="16sp"
+                            android:text="HD廠商" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdAdata"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Adata" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdSeagate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seagate" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdWD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="WD" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdToshiba"
+                            android:layout_width="99dp"
+                            android:layout_height="wrap_content"
+                            android:text="Toshiba" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdHGST"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HGST" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdSamsung"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Samsung" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdUMAX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UMAX" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdGalaxy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Galaxy" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdMicron"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Micron" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdIntel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Intel" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdHikvision"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hikvision" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdPioneer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pioneer" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdKingston"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kingston" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdSanDisk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SanDisk" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdTranscend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transcend" />
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdLiteon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Liteon" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:buttonTint="@color/aquamarine"
+                            android:textColor="@color/turquoise"
+                            android:id="@+id/hdPlextor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Plextor" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/hdlinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <EditText
+                        android:id="@+id/hdlower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="textPersonName"
+                        android:text="988"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="988" />
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:text="以上"
+                        android:textColor="@color/floralwhite"
+
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/hdupper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.2"
+                        android:ems="10"
+                        android:hint="10000"
+                        android:inputType="textPersonName"
+                        android:text="48800"
+                        android:textColor="@color/pink"
+                        android:textColorHighlight="@color/aliceblue"
+                        tools:text="48800" />
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.8"
+                        android:textColor="@color/floralwhite"
+
+                        android:text="以下"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/hdgo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="送出" />
+
+                <Button
+                    android:id="@+id/hdgoback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="回至廠商選擇"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@+id/HDlistView"
+                    android:layout_width="match_parent"
+                    android:layout_height="440dp"
+                    android:divider="@color/cornsilk"
+                    android:dividerHeight="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:choiceMode="multipleChoice"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/allLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#312f2f"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/cpuLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CPU中央處理器"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="CPU中央處理器" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="說明"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="說明" />
+
+                    <Button
+                        android:id="@+id/CPUmore"
+                        android:layout_width="31dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/ic_menu_send"
+                        android:backgroundTint="@color/aquamarine"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cpumenuLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/Dividers9"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513"
+                        android:baselineAligned="false" />
+
+                    <LinearLayout
+                        android:id="@+id/cpumenuLinearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:background="#312f2f"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/cpuspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <Button
+                            android:id="@+id/CPUmenumore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="26dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/ic_menu_send" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <LinearLayout
+                    android:id="@+id/MBLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="79dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="MB主機板"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="MB主機板" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="說明"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="說明" />
+
+                    <Button
+                        android:id="@+id/MBmore"
+                        android:layout_width="31dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/ic_menu_send"
+                        android:backgroundTint="@color/aquamarine" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/MBmenuLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#312f2f"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/Dividers10"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <LinearLayout
+                        android:id="@+id/MBmenuLinearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#312f2f"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/mbspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <Button
+                            android:id="@+id/MBmenumore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="26dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/ic_menu_send" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/Dividers11"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <LinearLayout
+                    android:id="@+id/VAGLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VGA顯示卡"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="VGA顯示卡" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="說明"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="說明" />
+
+                    <Button
+                        android:id="@+id/VGAmore"
+                        android:layout_width="31dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/ic_menu_send"
+                        android:backgroundTint="@color/aquamarine" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/VAGmenuLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/Dividers12"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <LinearLayout
+                        android:id="@+id/VGAmenuLinearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#312f2f"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/vgaspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <Button
+                            android:id="@+id/VGAmenumore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="26dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/ic_menu_send" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/Dividers13"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <LinearLayout
+                    android:id="@+id/RAMLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="RAM記憶體"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="RAM記憶體" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="說明"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="說明" />
+
+                    <Button
+                        android:id="@+id/RAMmore"
+                        android:layout_width="31dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/ic_menu_send"
+                        android:backgroundTint="@color/aquamarine" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/Dividers14"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <LinearLayout
+                    android:id="@+id/RAMmenuLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#312f2f"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/ramspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:popupBackground="@color/colorPrimary" />
+
+                    <Button
+                        android:id="@+id/RAMmenumore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/ic_menu_send" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/Dividers15"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <LinearLayout
+                    android:id="@+id/HHDLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="HHDSSD硬碟"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="HHDSSD硬碟" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="說明"
+                        android:textColor="#f9fe00"
+                        android:textSize="20sp"
+                        tools:text="說明" />
+
+                    <Button
+                        android:id="@+id/HHDmore"
+                        android:layout_width="31dp"
+                        android:layout_height="18dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/ic_menu_send"
+                        android:backgroundTint="@color/aquamarine" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/Dividers16"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8B4513" />
+
+                <LinearLayout
+                    android:id="@+id/HHDmenuLinearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#312f2f"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/hhdspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:popupBackground="@color/colorPrimary" />
+
+                    <Button
+                        android:id="@+id/HHDmenumore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/ic_menu_send" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/powermenuLinearLayoutmenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/Dividers18"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <LinearLayout
+                        android:id="@+id/powerLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Power電源供應器"
+                            android:textColor="#f9fe00"
+                            android:textSize="20sp"
+                            tools:text="power電源供應器" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="說明"
+                            android:textColor="#f9fe00"
+                            android:textSize="20sp"
+                            tools:text="說明" />
+
+                        <Button
+                            android:id="@+id/powermore"
+                            android:layout_width="31dp"
+                            android:layout_height="18dp"
+                            android:layout_weight="0.1"
+                            android:background="@drawable/ic_menu_send"
+                            android:backgroundTint="@color/aquamarine" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/Dividers19"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                    <LinearLayout
+                        android:id="@+id/powermenuLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#312f2f"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/powerspinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:popupBackground="@color/colorPrimary" />
+
+                        <Button
+                            android:id="@+id/powermenumore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="23dp"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/ic_menu_send" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:id="@+id/Dividers30"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#8B4513" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
+

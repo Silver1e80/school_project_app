@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">test2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Search1">寫下您要搜尋的商品 按下右邊按鈕搜尋</string>
+    <string name="dummy_button">進入系統</string>
+    <string name="chose">請選擇</string>
+
+    <string-array name="cpu">
+        <item>所有系列</item>
+        <item>Intel總系列</item>
+        <item>IC/IP</item>
+        <item>I3</item>
+        <item>I5</item>
+        <item>I7</item>
+        <item>I9</item>
+        <item>AMD 總系列</item>
+        <item>AMD A系列</item>
+        <item>AMD R3</item>
+        <item>AMD R5</item>
+        <item>AMD R7</item>
+        >
+    </string-array>
+    <string-array name="Intelcpu">
+        <item>Intel總系列</item>
+        <item>IC/IP</item>
+        <item>I3</item>
+        <item>I5</item>
+        <item>I7</item>
+        <item>I9</item>
+        >
+    </string-array>
+    <string-array name="AMDcpu">
+        <item>AMD 總系列</item>
+        <item>AMD A系列</item>
+        <item>AMD R3</item>
+        <item>AMD R5</item>
+        <item>AMD R7</item>
+        >
+    </string-array>
+    <string-array name="mb">
+        <item>mb1</item>
+        <item>mb2</item>>
+    </string-array>
+    <string-array name="vga">
+        <item>vga1</item>
+        <item>vga2</item>>
+    </string-array>
+    <string-array name="ram">
+        <item>ram1</item>
+        <item>ram2</item>>
+    </string-array>
+    <string-array name="hhd">
+        <item>hhd1</item>
+        <item>hhd2</item>>
+    </string-array>
+    <string-array name="power">
+        <item>power1</item>
+        <item>power2</item>>
+    </string-array>
+    <string-array name="cost">
+        <item>10000以內</item>
+        <item>10000-15000</item>
+        <item>15000-20000</item>
+        <item>20000-25000</item>
+        <item>25000-30000</item>
+        <item>30000-35000</item>
+        <item>35000-40000</item>
+        <item>40000以上</item>
+    </string-array>
+    <string-array name="mfcpu">
+        <item>mfcpu1</item>
+        <item>mfcpu2</item>>
+    </string-array>
+    <string-array name="mfmb">
+        <item>mfmb1</item>
+        <item>mfmb2</item>>
+    </string-array>
+    <string-array name="mfvga">
+        <item>mfvga1</item>
+        <item>mfvga2</item>>
+    </string-array>
+    <string-array name="mfram">
+        <item>mfram1</item>
+        <item>mfram2</item>>
+    </string-array>
+    <string-array name="mfhhdssd">
+        <item>mfhhdssd1</item>
+        <item>mfhhdssd2</item>>
+    </string-array>
+    <string-array name="mfpower">
+        <item>mfpower1</item>
+        <item>mfpower2</item>>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
